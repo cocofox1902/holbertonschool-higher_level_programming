@@ -9,14 +9,11 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *first;
-	listint_t *second;
+	listint_t *first = list;
+	listint_t *second = list;
 
 	if (!list)
 		return (0);
-
-	first = list->next;
-	second = list->next->next;
 
 	while (first && second && second->next)
 	{
