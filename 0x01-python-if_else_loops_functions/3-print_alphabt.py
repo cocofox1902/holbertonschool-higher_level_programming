@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-import string
-for letter in string.ascii_lowercase:
-    if letter == "q" or letter == "e":
+for alphabet in range(97, 123):
+    if chr(alphabet) == "q" or chr(alphabet) == "e":
         continue
     else:
-        print(letter, end="")
+        print("{}".format(chr(alphabet)), end="")
