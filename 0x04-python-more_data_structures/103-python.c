@@ -1,6 +1,13 @@
 #include <Python.h>
 #include <stdio.h>
 
+/**
+ * print_python_bytes - python
+ * @p: paramatre
+ *
+ * Return: list
+ */
+
 void print_python_bytes(PyObject *p)
 {
 	long int size;
@@ -28,6 +35,13 @@ void print_python_bytes(PyObject *p)
 	printf("\n");
 }
 
+/**
+ * print_python - python
+ * @p: paramatre
+ *
+ * Return: list
+ */
+
 void print_python(PyObject *p)
 {
 	int i;
@@ -39,7 +53,7 @@ void print_python(PyObject *p)
 
 	for (i = 0; i < lenght; i++)
 	{
-		printf("Element %i: %s\n", i, Py_TYPE(((PyListObject *)p)->ob_item[i])->tp_name);
+		printf("Element %i: %s\n", i, (((PyListObject *)p)->ob_item[i])->tp_name);
 		if (!strcmp((((PyListObject *)p)->ob_item[i])->ob_type->tp_name, "bytes"))
 			print_python_bytes(((PyListObject *)p)->ob_item[i]);
 	}
