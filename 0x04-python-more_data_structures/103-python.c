@@ -44,6 +44,7 @@ void print_python_bytes(PyObject *p)
 
 void print_python(PyObject *p)
 {
+	const char *t;
 	int i;
 	long int lenght = PyList_Size(p);
 
@@ -53,7 +54,8 @@ void print_python(PyObject *p)
 
 	for (i = 0; i < lenght; i++)
 	{
-		printf("Element %i: %s\n", i, (((PyListObject *)p)->ob_item[i])->tp_name);
+		t = (((PyListObject *)p)->ob_item[i])->ob_type->tp_name;
+		printf("Element %i: %s\n", i, t);
 		if (!strcmp((((PyListObject *)p)->ob_item[i])->ob_type->tp_name, "bytes"))
 			print_python_bytes(((PyListObject *)p)->ob_item[i]);
 	}
