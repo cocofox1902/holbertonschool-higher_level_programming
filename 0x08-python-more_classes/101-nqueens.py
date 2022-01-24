@@ -51,7 +51,7 @@ def goodPositon():
     """
 
     if len(sys.argv) != 2:
-        print('Usage: nqueenPlace N')
+        print('Usage: nqueens N')
         sys.exit(1)
     try:
         n = int(sys.argv[1])
