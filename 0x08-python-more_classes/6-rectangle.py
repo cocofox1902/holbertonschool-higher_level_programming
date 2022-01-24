@@ -2,9 +2,6 @@
 """module class of a rectangle"""
 
 
-from multiprocessing.sharedctypes import Value
-
-
 class Rectangle:
     """class rectangle
     """
