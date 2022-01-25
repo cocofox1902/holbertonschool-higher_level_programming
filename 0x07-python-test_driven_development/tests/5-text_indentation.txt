@@ -1,0 +1,60 @@
+The ``add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``add_integer`` module:
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+	>>> text_indentation("Hello, Wolrd.")
+	Hello, Wolrd.
+	<BLANKLINE>
+
+	>>> text_indentation("     \nHello, Wolrd.")
+	<BLANKLINE>
+	Hello, Wolrd.
+	<BLANKLINE>
+
+	>>> text_indentation("     Hello.       Wolrd.      ")
+	Hello.
+	<BLANKLINE>
+	Wolrd.
+	<BLANKLINE>
+
+	>>> text_indentation("Hello, Wolrd")
+	Hello, Wolrd
+
+	>>> text_indentation("Hello,\n Wolrd")
+	Hello,
+	 Wolrd
+
+	>>> text_indentation("")
+	
+
+	>>> text_indentation(7)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>> text_indentation(["3", "6"])
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	>>> module_documentation = __import__("5-text_indentation").__doc__
+	>>> print(len(module_documentation) > 0)
+	True
+
+	>>> function_documentation = __import__("5-text_indentation").__doc__
+	>>> print(len(function_documentation) > 0)
+	True
