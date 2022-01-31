@@ -3,16 +3,10 @@
 
 
 class MyList(list):
-    def __init__(self, number=list()):
-        """ function __init__
+    """class MyList
 
-        Args:
-            no Ags
-
-        Return:
-            no Return
+        def print_sorted
     """
-        self.list = list(number)
 
     def print_sorted(self):
         """ function print_sorted: sort a list
@@ -23,4 +17,4 @@ class MyList(list):
         Return:
             no return
     """
-        print("{}".format(sorted(self)))
+        print(sorted(self))
