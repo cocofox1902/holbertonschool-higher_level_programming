@@ -11,7 +11,7 @@ def read_file(filename=""):
         Return:
             no return
     """
-    with open(filename) as f:
+    with open(filename, 'r') as f:
         lines = f.read()
         f.close()
     print(lines)
