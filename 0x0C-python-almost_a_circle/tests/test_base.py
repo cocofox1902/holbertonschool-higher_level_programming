@@ -8,15 +8,6 @@ Execute this test: python3 -m unittest tests/test_models/test_base.py
 import unittest
 import pycodestyle
 from models import base
-"""
-Unittest for "base.py"
-Execute all tests: python3 -m unittest discover tests
-Execute this test: python3 -m unittest tests/test_models/test_base.py
-"""
-
-import unittest
-import pycodestyle
-from models import base
 Base = base.Base
 
 
