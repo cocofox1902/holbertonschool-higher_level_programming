@@ -96,12 +96,21 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base(1, 2)
 
+    def test_toJsonNumber(self):
+        """Convert number to Json content"""
+        self.assertEqual(5.5, Base(5.5).id)
+
+    def test_toJsonComplex(self):
+        """Convert complex to Json content"""
+        self.assertEqual(complex(5), Base(complex(5)).id)
+
     def test_toJsonString(self):
         """Convert list to Json content"""
         l = [{"Salut": 1, "Bonjour": 2}]
         string = Base.to_json_string(l)
         self.assertTrue(type(string), str)
         self.assertEqual(string, '[{"Salut": 1, "Bonjour": 2}]')
+
 
     def test_toJsonString_empty(self):
         """Convert empty list to Json content"""
