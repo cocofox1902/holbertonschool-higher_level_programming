@@ -56,11 +56,11 @@ class Base:
                 object of the base
         """
         filename = cls.__name__ + ".json"
-        count = len(list_objs) - 1
         with open(filename, 'w') as f:
             if list_objs is None:
                 f.write('[]')
             else:
+                count = len(list_objs) - 1
                 f.write('[')
                 for i in list_objs:
                     dict = i.to_dictionary()
