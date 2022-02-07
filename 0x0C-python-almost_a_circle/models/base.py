@@ -194,7 +194,7 @@ class Base:
                 xxx
         """
         deg = 90
-        turtle.pensize(4)
+        turtle.pensize(2)
         turtle.speed(10)
 
         turtle.color("red", "blue")
