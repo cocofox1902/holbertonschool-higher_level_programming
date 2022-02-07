@@ -193,35 +193,4 @@ class Base:
             Return:
                 xxx
         """
-        deg = 90
-        turtle.pensize(2)
-        turtle.speed(10)
-
-        turtle.color("red", "blue")
-        for i in list_rectangles:
-            turtle.up()
-            turtle.goto(i.x, i.y)
-            turtle.down()
-            for y in range(2):
-                turtle.begin_fill()
-                turtle.forward(i.width)
-                turtle.left(deg)
-                turtle.forward(i.height)
-                turtle.left(deg)
-                turtle.end_fill()
-
-
-        turtle.color("black", "orange")
-        for i in list_squares:
-            turtle.up()
-            turtle.goto(i.x, i.y)
-            turtle.down()
-            for y in range(2):
-                turtle.begin_fill()
-                turtle.forward(i.width)
-                turtle.left(deg)
-                turtle.forward(i.height)
-                turtle.left(deg)
-                turtle.end_fill()
-
-        turtle.exitonclick()
+        return(0)
