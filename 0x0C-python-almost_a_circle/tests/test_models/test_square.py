@@ -274,8 +274,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r1.size, 50)
         # *args & **kwars
         r1.update(55, 55, size=50, id=80)
-        self.assertEqual(r1.id, 80)
-        self.assertEqual(r1.size, 50)
+        self.assertEqual(r1.id, 55)
+        self.assertEqual(r1.size, 55)
 
     # test to_dictionary
 
@@ -307,8 +307,8 @@ class TestSquare(unittest.TestCase):
 
         s1 = Square(10, 7, 8, 10)
         s2 = Square(2, 4, 0, 19)
-        str1 = '[{"x": 7, "y": 8, "id": 10, "size": 10}, '
-        str2 = '{"x": 4, "y": 0, "id": 19, "size": 2}]'
+        str1 = '[{"id": 10, "size": 10, "x": 7, "y": 8}, '
+        str2 = '{"id": 19, "size": 2, "x": 4, "y": 0}]'
         str3 = str1 + str2
         Square.save_to_file([s1, s2])
         with open("Square.json", "r") as file:
