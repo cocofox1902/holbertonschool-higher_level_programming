@@ -13,4 +13,6 @@ if __name__ == "__main__":
     else:
         for comment in resp.json()[:10]:
             print("{}: {}".format(comment.get('sha'),
-                                  comment.get('commit').get('author').get('name')))
+                                  comment.get('commit')
+                                         .get('author')
+                                         .get('name')))
