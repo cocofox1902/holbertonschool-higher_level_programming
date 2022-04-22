@@ -3,9 +3,8 @@
 
 
 if __name__ == "__main__":
-    import urllib.request
-    from sys import argv
+    import requests
+    import sys
 
-    with urllib.request.urlopen(argv[1]) as response:
-        html = response.headers.get('X-Request-Id')
-        print(html)
+    html = requests.get(sys.argv[1])
+    print(html.headers.get('X-Request-Id'))
