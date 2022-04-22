@@ -2,9 +2,6 @@
 """ 100 - github_commits.py """
 
 
-from tokenize import Comment
-
-
 if __name__ == "__main__":
     import requests
     import sys
