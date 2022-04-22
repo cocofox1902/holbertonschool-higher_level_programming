@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import sys
 
     resp = requests.get('https://api.github.com/user',
-                     auth=(sys.argv[1], sys.argv[2]))
+                        auth=(sys.argv[1], sys.argv[2]))
     if resp.status_code >= 400:
         print('None')
     else:
