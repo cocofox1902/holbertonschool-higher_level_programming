@@ -8,5 +8,5 @@ axios
     console.log('code:', response.status);
   })
   .catch(function (error) {
-    console.error('code: ', error.response.status);
+    console.error('code:', error.response.status);
   });
