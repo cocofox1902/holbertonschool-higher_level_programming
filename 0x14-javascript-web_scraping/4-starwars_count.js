@@ -1,12 +1,21 @@
 #!/usr/bin/node
 
-const axios = require('axios').default;
+const axios = require('axios');
+const URL = process.argv[2];
 
 axios
-  .get('https://swapi-api.hbtn.io/api/people/18/')
-  .then(function (response) {
-    console.log(response.data.films.length);
+  .get(`${URL}`)
+  .then((res) => {
+    let counter = 0;
+    for (const film of res.data.results) {
+      for (const listActors of film.characters) {
+        if (listActors.includes('people/18/')) {
+          counter++;
+        }
+      }
+    }
+    console.log(counter);
   })
-  .catch(function () {
-    console.log('error');
+  .catch((err) => {
+    console.error(err);
   });
