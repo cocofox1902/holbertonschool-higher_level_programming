@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const axios = require("axios");
+const axios = require('axios');
 
 const List = {};
 let value;
